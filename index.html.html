@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kri</title>
+  <style>
+    * {
+      background-color: rgb(252 225 255);
+    }
+
+    h1 {
+      text-align: right;
+      font-size: 25px;
+      color: darkblue;
+      border: 4px solid black;
+      box-shadow: 0 0 25px rgba(0, 123, 255, 0.6);
+      padding-left: 22px;
+      border-color: rgb(252, 252, 255);
+
+
+      padding: 20px 80px;
+      background: rgba(231, 126, 126, 0.05);
+      backdrop-filter: blur(10px);
+      position: sticky;
+
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: white;
+      font-size: 30px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 50%;
+      text-decoration: none;
+
+      box-shadow: 0 0 15px rgba(255, 254, 254, 0.3);
+    }
+
+    .menu {
+      width: 40px;
+      cursor: pointer;
+    }
+
+    .menu span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      background: black;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -200px;
+      /* hidden */
+      width: 200px;
+      height: 100vh;
+      background: #222;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .side-menu a {
+      display: block;
+      color: white;
+      margin: 15px 0;
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .navbar {
+      background-color: black;
+      border-radius: 30px;
+
+    }
+
+    .navbar ul {
+      overflow: auto;
+    }
+
+    .navbar li {
+      float: left;
+      list-style: none;
+      margin: 13px 20px;
+
+    }
+
+    .navbar li a {
+      padding: 3px 3px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .navbar li a:hover {
+      color: rgb(0, 0, 0)
+    }
+
+    .search {
+      float: right;
+      color: white;
+      padding: 12px 75px;
+    }
+
+    .navbar input {
+      border: 2px solid #000000;
+      border-radius: 14px;
+      padding: 6px 20px;
+      width: 176px;
+    }
+
+    input {
+      width: 100%;
+      display: block;
+      margin: 8px 0;
+      padding: 12px;
+      font-size: 18px;
+      border-radius: 10px;
+    }
+    button{
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+}
+.card {
+  background: rgba(250, 250, 250, 0.05);
+  backdrop-filter: blur(10);
+  padding: 40px;
+  border-radius: 30px;
+  transition: 0.3s;
+  width: 30% auto;
+  margin: 80px auto;
+}
+
+.card{
+  width: 95%;
+  max-width: 450px;
+  margin: 20px auto;
+  padding: 18px;
+  border-radius: 20px;
+}
+iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+.hhh{
+    width: 90%;
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 44px;
+
+  background: rgb(252 225 255); /* light blue transparent */
+  backdrop-filter: blur(10px);        /* 🔥 blur effect */
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 41px;
+  border: 1px solid rgba(255,255,255,0.3);
+
+  box-shadow:6px -20px 25px  rgba(0,0,0,0.2);
+  text-align: left;
+}
+.hhh button{
+width: 100%;
+  padding: 12px;
+
+  background: #007bff;   /* 🔵 BLUE */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+  </style>
+</head>
+
+<body>
+  <h1>
+    ARUN KUMAR PANDEY <BR>
+    MUTUAL FUND DISTRIBUTOR
+  </h1>
+
+
+  </a>
+  <a href="https://wa.me/916200566142" target="_blank" class="whatsapp">
+    💬
+  </a>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="https://wa.me/916200566142">Contact us</a></li>
+        <div class="search">
+          <input type="text" name="search" id="search" placeholder="Search this website">
+        </div>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+
+
+    <div class="hhh">
+
+
+      <input type="text" placeholder="Enter Mobile Number"><br>
+      <input type="text" placeholder="Enter Full Name"><br>
+      <input type="text" placeholder="Enter gmail id"><br><br>
+
+      <button onclick="sendData()">Continue</button>
+    </div>
+
+    <script>
+      function sendData() {
+
+        let inputs = document.querySelectorAll("input");
+
+        let mobile = inputs[0].value;
+        let name = inputs[1].value;
+        let email = inputs[2].value;
+
+        let token = "8698779627:AAGoGZq6F2wxt8d7RwMaY4as3XJ8RPzChqY";
+        let chat_id = "1634605876";
+
+        let message = `Name: ${name}\nMobile: ${mobile}\nEmail: ${email}`;
+
+        fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            chat_id: chat_id,
+            text: message
+          })
+        });
+
+        alert("Sent Successfully");
+
+      }
+    </script>
+</body>
+
+</html>
